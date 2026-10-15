@@ -1,0 +1,3 @@
+# Authenova runs on the Python standard library only - nothing to install.
+# Optional local SBERT + DeBERTa models (big download, local use only):
+#   pip install -r requirements-local.txt

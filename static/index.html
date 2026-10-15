@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenova — Look Beyond the Surface</title>
+    <meta name="description" content="AI-powered verification for media authenticity and claims.">
+    <meta name="theme-color" content="#090b10">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css?v=authenova_3">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#home" class="brand" data-route="home" aria-label="Authenova home">
+                <svg class="brand-mark" width="26" height="26" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                    <circle cx="13" cy="13" r="9" stroke="currentColor" stroke-width="2.2"/>
+                    <path d="M8.5 13h9M13 8.5v9" stroke="currentColor" stroke-width="1.4" opacity=".55"/>
+                    <path d="M19.6 19.6 27 27" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+                </svg>
+                <span class="brand-name">Authenova</span>
+            </a>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+                <span></span><span></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links" aria-label="Primary">
+                <a href="#media" class="nav-link" data-route="media"><span class="dot dot-media" aria-hidden="true"></span>Verify Media</a>
+                <a href="#claim" class="nav-link" data-route="claim"><span class="dot dot-claim" aria-hidden="true"></span>Investigate Claim</a>
+                <a href="#about" class="nav-link" data-route="about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+
+        <!-- ================= HOME ================= -->
+        <section class="view view-home is-active" id="view-home" data-view="home" aria-labelledby="hero-title">
+            <div class="hero" id="hero">
+                <div class="hero-grid" aria-hidden="true"></div>
+                <div class="hero-inner">
+                    <p class="hero-brand">Authenova</p>
+                    <div class="hero-title-wrap">
+                        <h1 class="hero-title" id="hero-title">Look Beyond<br>the Surface.</h1>
+                        <!-- Forensic layer revealed by the lens (decorative) -->
+                        <div class="hero-title hero-title-xray" aria-hidden="true">Look Beyond<br>the Surface.</div>
+                        <div class="hero-lens" aria-hidden="true"></div>
+                    </div>
+                    <p class="hero-sub">AI-powered verification for media authenticity and claims.</p>
+                </div>
+            </div>
+
+            <div class="engines" role="list">
+                <article class="engine engine-media" role="listitem">
+                    <div class="engine-head">
+                        <span class="engine-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="2"/><path d="m21 15-4.5-4.5L6 21"/></svg>
+                        </span>
+                        <span class="engine-kicker">Media Analysis Engine</span>
+                    </div>
+                    <h2 class="engine-title">Verify Media</h2>
+                    <p class="engine-desc">Analyze images and videos for signs of AI generation or manipulation.</p>
+                    <ul class="engine-facts">
+                        <li>Images: JPG, PNG, WEBP or a URL</li>
+                        <li>Videos: MP4, AVI, MOV</li>
+                    </ul>
+                    <a href="#media" class="btn btn-media" data-route="media">Verify Media</a>
+                </article>
+
+                <div class="engines-plus" aria-hidden="true"><span>+</span></div>
+
+                <article class="engine engine-claim" role="listitem">
+                    <div class="engine-head">
+                        <span class="engine-icon" aria-hidden="true">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M4 10h16M4 15h9"/><circle cx="17.5" cy="17.5" r="3"/><path d="m19.7 19.7 2.3 2.3"/></svg>
+                        </span>
+                        <span class="engine-kicker">Claim Intelligence Engine</span>
+                    </div>
+                    <h2 class="engine-title">Investigate a Claim</h2>
+                    <p class="engine-desc">Investigate claims using web evidence, source analysis and semantic reasoning.</p>
+                    <ul class="engine-facts">
+                        <li>Live web evidence with citations</li>
+                        <li>Supporting and contradicting sources side by side</li>
+                    </ul>
+                    <a href="#claim" class="btn btn-claim" data-route="claim">Investigate Claim</a>
+                </article>
+            </div>
+
+            <p class="principle">Two engines. One platform. <strong>Independent decisions.</strong></p>
+        </section>
+
+        <!-- ================= VERIFY MEDIA ================= -->
+        <section class="view view-media" id="view-media" data-view="media" aria-labelledby="media-title" hidden>
+            <header class="view-head">
+                <p class="view-engine"><span class="dot dot-media" aria-hidden="true"></span>Media Analysis Engine</p>
+                <h1 class="view-title" id="media-title">Verify Media</h1>
+                <p class="view-lede">Check an image or video for signs of AI generation or manipulation.</p>
+            </header>
+
+            <div class="segmented" role="tablist" aria-label="Media type">
+                <button class="seg is-active" role="tab" id="tab-image" aria-selected="true" aria-controls="panel-image" data-media-tab="image">Image</button>
+                <button class="seg" role="tab" id="tab-video" aria-selected="false" aria-controls="panel-video" data-media-tab="video" tabindex="-1">Video</button>
+                <span class="seg-thumb" aria-hidden="true"></span>
+            </div>
+
+            <!-- IMAGE PANEL -->
+            <div class="media-layout" id="panel-image" role="tabpanel" aria-labelledby="tab-image">
+                <div class="panel">
+                    <div class="dropzone" id="image-dropzone" role="button" tabindex="0" aria-describedby="image-drop-help">
+                        <input type="file" id="image-file-input" accept="image/*" class="visually-hidden" tabindex="-1">
+                        <div class="dz-empty" id="image-dz-empty">
+                            <span class="dz-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+                            </span>
+                            <p class="dz-title">Drop an image here, or <span class="dz-link">browse files</span></p>
+                            <p class="dz-help" id="image-drop-help">JPG, PNG or WEBP</p>
+                        </div>
+                        <div class="dz-preview" id="image-dz-preview" hidden>
+                            <img id="image-preview" alt="Preview of the selected image">
+                            <div class="scan-line" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <div class="file-chip" id="image-file-chip" hidden>
+                        <div class="file-chip-info">
+                            <span class="file-chip-name" id="image-file-name"></span>
+                            <span class="file-chip-meta" id="image-file-meta"></span>
+                        </div>
+                        <button type="button" class="link-btn" id="image-clear-btn">Remove</button>
+                    </div>
+
+                    <div class="or-divider"><span>or paste an image URL</span></div>
+
+                    <label class="visually-hidden" for="image-url-input">Image URL</label>
+                    <input type="url" id="image-url-input" class="field" placeholder="https://example.com/photo.jpg" autocomplete="off" spellcheck="false">
+
+                    <button type="button" id="verify-image-btn" class="btn btn-media btn-block">
+                        <span class="btn-spinner" aria-hidden="true"></span>
+                        <span class="btn-label">Verify Image</span>
+                    </button>
+
+                    <div class="notice notice-error" id="image-error" role="alert" hidden></div>
+                </div>
+
+                <div class="result-slot" aria-live="polite">
+                    <div class="result-empty" id="image-empty">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <p>Your image analysis will appear here.</p>
+                    </div>
+
+                    <div class="result-loading" id="image-loading" hidden>
+                        <div class="pulse-ring" aria-hidden="true"></div>
+                        <p class="loading-title">Analyzing image</p>
+                        <p class="loading-sub">Checking for generation and manipulation signatures</p>
+                    </div>
+
+                    <article class="result-card media-result" id="image-result" hidden>
+                        <p class="result-label">Media analysis</p>
+                        <h2 class="media-verdict" id="image-verdict">—</h2>
+
+                        <dl class="score-list">
+                            <div class="score-row">
+                                <dt>Authentic</dt>
+                                <dd><span class="score-val" id="img-authentic-pct">—</span><span class="score-bar"><span class="bar-fill fill-good" id="img-authentic-bar"></span></span></dd>
+                            </div>
+                            <div class="score-row">
+                                <dt>AI-generated</dt>
+                                <dd><span class="score-val" id="img-ai-pct">—</span><span class="score-bar"><span class="bar-fill fill-warn" id="img-ai-bar"></span></span></dd>
+                            </div>
+                            <div class="score-row">
+                                <dt>Deepfake</dt>
+                                <dd><span class="score-val" id="img-deepfake-pct">—</span><span class="score-bar"><span class="bar-fill fill-bad" id="img-deepfake-bar"></span></span></dd>
+                            </div>
+                        </dl>
+
+                        <div class="signatures" id="image-signatures" hidden>
+                            <h3 class="sub-heading">Likely generation sources</h3>
+                            <ul class="signature-list" id="image-signature-list"></ul>
+                        </div>
+
+                        <p class="result-footnote">Scores reflect model confidence, not certainty. Treat them as one signal among others.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- VIDEO PANEL -->
+            <div class="media-layout" id="panel-video" role="tabpanel" aria-labelledby="tab-video" hidden>
+                <div class="panel">
+                    <div class="dropzone" id="video-dropzone" role="button" tabindex="0" aria-describedby="video-drop-help">
+                        <input type="file" id="video-file-input" accept="video/*" class="visually-hidden" tabindex="-1">
+                        <div class="dz-empty" id="video-dz-empty">
+                            <span class="dz-icon" aria-hidden="true">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4m0 0-4.5 4.5M12 4l4.5 4.5"/><path d="M4 15v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg>
+                            </span>
+                            <p class="dz-title">Drop a video here, or <span class="dz-link">browse files</span></p>
+                            <p class="dz-help" id="video-drop-help">MP4, AVI or MOV. Clips with clearly visible faces work best.</p>
+                        </div>
+                        <div class="dz-preview" id="video-dz-preview" hidden>
+                            <video id="video-preview" muted playsinline controls preload="metadata"></video>
+                            <div class="scan-line" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <div class="file-chip" id="video-file-chip" hidden>
+                        <div class="file-chip-info">
+                            <span class="file-chip-name" id="video-file-name"></span>
+                            <span class="file-chip-meta" id="video-file-meta"></span>
+                        </div>
+                        <button type="button" class="link-btn" id="video-clear-btn">Remove</button>
+                    </div>
+
+                    <button type="button" id="verify-video-btn" class="btn btn-media btn-block">
+                        <span class="btn-spinner" aria-hidden="true"></span>
+                        <span class="btn-label">Verify Video</span>
+                    </button>
+
+                    <div class="notice notice-error" id="video-error" role="alert" hidden></div>
+                </div>
+
+                <div class="result-slot" aria-live="polite">
+                    <div class="result-empty" id="video-empty">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                        <p>Your video analysis will appear here.</p>
+                    </div>
+
+                    <div class="result-loading" id="video-loading" hidden>
+                        <div class="pulse-ring" aria-hidden="true"></div>
+                        <p class="loading-title">Analyzing video</p>
+                        <p class="loading-sub">Checking frames across the video. Longer clips take more time.</p>
+                    </div>
+
+                    <article class="result-card media-result" id="video-result" hidden>
+                        <p class="result-label">Media analysis</p>
+                        <h2 class="media-verdict" id="video-verdict">—</h2>
+                        <dl class="detail-list">
+                            <div><dt>File</dt><dd id="video-processed-filename">—</dd></div>
+                            <div><dt>Frame analysis</dt><dd id="video-raw-classification">—</dd></div>
+                        </dl>
+                        <p class="result-footnote">Scores reflect model confidence across sampled frames, not certainty. Treat them as one signal among others.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= INVESTIGATE CLAIM ================= -->
+        <section class="view view-claim" id="view-claim" data-view="claim" aria-labelledby="claim-title" hidden>
+            <header class="view-head">
+                <p class="view-engine"><span class="dot dot-claim" aria-hidden="true"></span>Claim Intelligence Engine</p>
+                <h1 class="view-title" id="claim-title">Investigate a Claim</h1>
+                <p class="view-lede">Authenova searches the live web, weighs what sources say, and shows you exactly why it reached its verdict.</p>
+            </header>
+
+            <form class="claim-form panel" id="claim-form" novalidate>
+                <label for="claim-input" class="claim-label">Enter a claim to investigate</label>
+                <textarea id="claim-input" class="claim-textarea" rows="3" maxlength="1000" placeholder="The Earth orbits the Sun." aria-describedby="char-count claim-hint"></textarea>
+                <div class="claim-form-foot">
+                    <div class="samples">
+                        <span class="samples-label" id="claim-hint">Try:</span>
+                        <button type="button" class="chip" data-sample="The Earth orbits the Sun.">The Earth orbits the Sun</button>
+                        <button type="button" class="chip" data-sample="The Taj Mahal is located in Mumbai.">The Taj Mahal is in Mumbai</button>
+                        <button type="button" class="chip" data-sample="Water boils at 100 degrees Celsius at standard atmospheric pressure.">Water boils at 100°C at 1 atm</button>
+                    </div>
+                    <div class="claim-actions">
+                        <span class="char-count" id="char-count"><span id="char-counter">0</span>/1000</span>
+                        <button type="submit" id="investigate-btn" class="btn btn-claim">
+                            <span class="btn-spinner" aria-hidden="true"></span>
+                            <span class="btn-label">Investigate Claim</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="notice notice-error" id="claim-error" role="alert" hidden></div>
+
+            <!-- Progress -->
+            <div class="progress panel" id="claim-progress" hidden aria-live="polite">
+                <div class="progress-head">
+                    <div>
+                        <p class="progress-title">Investigating</p>
+                        <p class="progress-claim" id="progress-claim"></p>
+                    </div>
+                    <span class="progress-timer" id="progress-timer" aria-label="Elapsed time">0.0s</span>
+                </div>
+                <ol class="pipeline" id="pipeline">
+                    <li class="step" data-step="1"><span class="step-node"></span><span class="step-name">Claim</span><span class="step-desc">Reading the claim</span></li>
+                    <li class="step" data-step="2"><span class="step-node"></span><span class="step-name">Search</span><span class="step-desc">Querying the live web</span></li>
+                    <li class="step" data-step="3"><span class="step-node"></span><span class="step-name">Evidence</span><span class="step-desc">Collecting relevant passages</span></li>
+                    <li class="step" data-step="4"><span class="step-node"></span><span class="step-name">Analysis</span><span class="step-desc">Weighing support and contradiction</span></li>
+                    <li class="step" data-step="5"><span class="step-node"></span><span class="step-name">Verdict</span><span class="step-desc">Writing up the findings</span></li>
+                </ol>
+                <p class="progress-note">A full investigation usually takes 25–35 seconds.</p>
+            </div>
+
+            <!-- Results -->
+            <div class="claim-results" id="claim-results" hidden>
+                <article class="verdict-card" id="verdict-card" tabindex="-1" aria-labelledby="verdict-text">
+                    <div class="verdict-main">
+                        <p class="result-label">Verdict</p>
+                        <h2 class="verdict-text" id="verdict-text">—</h2>
+                        <p class="verdict-strength" id="verdict-strength"></p>
+                    </div>
+                    <div class="verdict-claim">
+                        <p class="result-label">Claim</p>
+                        <blockquote class="claim-quote" id="result-claim-text"></blockquote>
+                    </div>
+                    <div class="tally" aria-label="Evidence tally">
+                        <div class="tally-item tally-support"><span class="tally-num" id="count-supporting">0</span><span class="tally-name">supporting</span></div>
+                        <div class="tally-item tally-contra"><span class="tally-num" id="count-contradicting">0</span><span class="tally-name">contradicting</span></div>
+                        <div class="tally-item tally-neutral"><span class="tally-num" id="count-neutral">0</span><span class="tally-name">neutral</span></div>
+                    </div>
+                    <div class="tally-bar" id="tally-bar" aria-hidden="true">
+                        <span class="tb-support"></span><span class="tb-contra"></span><span class="tb-neutral"></span>
+                    </div>
+                </article>
+
+                <section class="reasoning panel" aria-labelledby="reasoning-title">
+                    <h2 class="section-title" id="reasoning-title">Why this verdict?</h2>
+                    <div class="reasoning-body" id="result-reasoning"></div>
+                </section>
+
+                <section class="factchecks panel" id="factchecks" aria-labelledby="factchecks-title" hidden>
+                    <header class="factchecks-head">
+                        <h2 class="section-title" id="factchecks-title">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+                            Fact-checker verdicts
+                        </h2>
+                        <p class="factchecks-sub">Published reviews of this claim by professional fact-checking organizations.</p>
+                    </header>
+                    <ul class="fc-list" id="factchecks-list"></ul>
+                </section>
+
+                <div class="evidence-grid">
+                    <section class="evidence-col col-support" aria-labelledby="support-title">
+                        <header class="col-head">
+                            <h2 class="section-title" id="support-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                                Supporting evidence
+                            </h2>
+                            <span class="col-count" id="supporting-badge-count">0</span>
+                        </header>
+                        <div class="evidence-list" id="supporting-evidence-list"></div>
+                    </section>
+
+                    <section class="evidence-col col-contra" aria-labelledby="contra-title">
+                        <header class="col-head">
+                            <h2 class="section-title" id="contra-title">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                                Contradicting evidence
+                            </h2>
+                            <span class="col-count" id="contradicting-badge-count">0</span>
+                        </header>
+                        <div class="evidence-list" id="contradicting-evidence-list"></div>
+                    </section>
+                </div>
+
+                <section class="sources panel" aria-labelledby="sources-title">
+                    <h2 class="section-title" id="sources-title">Sources</h2>
+                    <ol class="source-list" id="sources-container"></ol>
+                </section>
+
+                <aside class="uncertainty" aria-labelledby="uncertainty-title">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5" stroke-linecap="round"/></svg>
+                    <div>
+                        <h2 class="uncertainty-title" id="uncertainty-title">Limits of this result</h2>
+                        <p id="result-uncertainty"></p>
+                        <p class="uncertainty-standing">Verdicts are based on the evidence found, not absolute truth. Open the sources to judge for yourself.</p>
+                    </div>
+                </aside>
+
+                <div class="results-actions">
+                    <button type="button" class="btn btn-ghost" id="new-claim-btn">Investigate another claim</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= ABOUT ================= -->
+        <section class="view view-about" id="view-about" data-view="about" aria-labelledby="about-title" hidden>
+            <header class="view-head">
+                <h1 class="view-title" id="about-title">Independent engines.<br>Independent decisions.</h1>
+                <p class="view-lede">Authenova runs two verification engines side by side. They never share inputs, scores or verdicts, so a doctored photo can't sway a fact check, and a true claim can't vouch for a fake image.</p>
+            </header>
+
+            <div class="arch" aria-label="Architecture overview">
+                <div class="arch-platform">Authenova</div>
+                <div class="arch-lanes">
+                    <div class="lane lane-media">
+                        <p class="lane-engine"><span class="dot dot-media" aria-hidden="true"></span>Media Analysis Engine</p>
+                        <h2 class="lane-title">Verify Media</h2>
+                        <ol class="lane-flow">
+                            <li>Image or video in</li>
+                            <li>Visual forensics</li>
+                            <li>Authentic or manipulated</li>
+                        </ol>
+                        <dl class="lane-tech">
+                            <div><dt>Images</dt><dd>Hive AI vision detectors for synthetic generation and face-swap deepfakes</dd></div>
+                            <div><dt>Videos</dt><dd>InceptionV3-based sequence classifier that checks facial consistency across frames</dd></div>
+                        </dl>
+                    </div>
+
+                    <div class="lane-divider" aria-hidden="true">
+                        <span class="lane-divider-line"></span>
+                        <span class="lane-divider-plus">+</span>
+                        <span class="lane-divider-line"></span>
+                    </div>
+
+                    <div class="lane lane-claim">
+                        <p class="lane-engine"><span class="dot dot-claim" aria-hidden="true"></span>Claim Intelligence Engine</p>
+                        <h2 class="lane-title">Investigate a Claim</h2>
+                        <ol class="lane-flow">
+                            <li>Claim in</li>
+                            <li>Web evidence and reasoning</li>
+                            <li>Supported, contradicted or inconclusive</li>
+                        </ol>
+                        <dl class="lane-tech">
+                            <div><dt>Search</dt><dd>Live web retrieval through Tavily, with queries planned by an LLM on Groq</dd></div>
+                            <div><dt>Ranking</dt><dd>SBERT semantic similarity picks the most relevant passages</dd></div>
+                            <div><dt>Stance</dt><dd>DeBERTa-v3 natural language inference decides whether each passage supports or contradicts the claim</dd></div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rules">
+                <div class="rule">
+                    <h3>No combined scores</h3>
+                    <p>Media scores and claim verdicts are never averaged, weighted or merged.</p>
+                </div>
+                <div class="rule">
+                    <h3>Separate vocabularies</h3>
+                    <p>Media is reported as authentic or manipulated. Claims are likely supported, likely contradicted or inconclusive.</p>
+                </div>
+                <div class="rule">
+                    <h3>Evidence over certainty</h3>
+                    <p>Every result shows what it's based on and where its limits are.</p>
+                </div>
+            </div>
+
+            <div class="about-cta">
+                <a href="#media" class="btn btn-media" data-route="media">Verify Media</a>
+                <a href="#claim" class="btn btn-claim" data-route="claim">Investigate Claim</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <span class="footer-brand">Authenova</span>
+            <span class="footer-note">Look Beyond the Surface.</span>
+        </div>
+    </footer>
+
+    <script src="/static/app.js?v=authenova_3"></script>
+</body>
+</html>
